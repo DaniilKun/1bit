@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstBitTest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="title">Онлайн конфигуратор</h1>
+            <h2 class="subtitle">ЗАДАЙТЕ ПАРАМЕТРЫ СТЕКЛА</h2>
+            <hr />
+            <form class="calc">
+                <div class="calc__params">
+                    <h3 class="calc__title">Укажите длину</h3>
+                    <input type="number" placeholder="Длина | мм" class="calc__content length">
+                </div>
+                <div class="calc__params">
+                    <h3 class="calc__title">Укажите ширину</h3>
+                    <input type="number" placeholder="Ширина | мм" class="calc__content width">
+                </div>
+                <div class="calc__params dropdown block">
+                    <h3 class="calc__dropdown-title">Форма стекла
+                        <a href="#" class="focus"><img class='question__popap' src='./img/questions.svg' /></a>
+                        <span class="hidden">Выберите из списка</span>
+                    </h3>
+                    <div class="box">
+                        <select class="form">
+                            <option>  &#xf0c8; Прямоугольник</option>
+                            <option> &#xf111; Круг(Овал)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calc__params dropdown block">
+                    <h3 class="calc__dropdown-title">Вид обработки
+                        <a href="#" class="focus"><img class='question__popap' src='./img/questions.svg' /></a>
+                        <span class="hidden">Выберите из списка</span>
+                    </h3>
+                    <div class="box">
+                        <select class="view">
+                            <option> &#xf057; Без обработки</option>
+                            <option> &#xf057; С шлифовкой</option>
+                            <option> &#xf057; С полировкой</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calc__params">
+                    <h3 class="calc__title">Количество</h3>
+                    <label class="calc__count">
+                        <input type="button" value="-" onClick="change('amount',0,10,-1);" />
+                        <input class="count" id="amount" type="text" value="1" />
+                        <input type="button" value="+" onClick="change('amount',0,10, 1);" />
+                    </label>
+                </div>
+                <div class="calc__params">
+                    <h3 class="calc__title">Сумма</h3>
+                    <label class="calc__result">
+                        <output type="number" class="calc__sum"></output>
+                        <button class="calc__result-button">
+                            <img class="calc__result-button" src="./img/out.svg" />
+                            </button>
+                    </label>
+
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
